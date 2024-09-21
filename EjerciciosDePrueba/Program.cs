@@ -1,10 +1,113 @@
-﻿internal class Program
+﻿
+using System.Reflection;
+
+internal class Program
 {
     private static void Main(string[] args)
     {
         //Llamamos al metodo PedirNombreYSaludar, permite ejecurarse 
         //PedirNombreYSaludar();
-        CalcularDíasDevida();
+        //CalcularDíasDevida();
+        //ImprimirMinimode4();
+        //Triangulos();
+        FechaValidaInvalida();
+
+
+    }
+
+    //Realizar un metodo que pida una fecha y determine si es valida o no. Que tenga en cuenta los años bisiestos, los meses con 30 y 31 dias
+    private static void FechaValidaInvalida()
+    {
+        // Declaramos las variables
+
+        int dia, mes, año;
+
+        //Pedimos la fecha al usuario
+
+        Console.Write("Ingrese el día: ");
+        dia = int.Parse(Console.ReadLine());
+
+        Console.Write("Ingrese el mes: ");
+        mes = int.Parse(Console.ReadLine());
+
+        Console.Write("Ingrese el año: ");
+        año = int.Parse(Console.ReadLine());
+
+        if 
+    }
+
+    //Realizar un metodo que pida los lados de un triangulo y determine si es un triangulo equilatero, isosceles o escaleno
+    private static void Triangulos()
+    {
+        //Declaramos las variables
+        int lado1, lado2, lado3;
+
+        //Pedimos los lados al usuario
+        Console.Write("Ingrese el primer lado: ");
+        lado1 = int.Parse(Console.ReadLine());
+
+        Console.Write("Ingrese el segundo lado: ");
+        lado2 = int.Parse(Console.ReadLine());
+
+        Console.Write("Ingrese el tercer lado: ");
+        lado3 = int.Parse(Console.ReadLine());
+
+        //Comparamos los lados para saber que tipo de triangulo es
+
+        if (lado1 == lado2 && lado1 == lado3)
+        {
+            Console.WriteLine("Es un triangulo equilatero");
+        }
+        else if (lado1 == lado2 || lado1 == lado3 || lado2 == lado3)
+        {
+            Console.WriteLine("Es un triangulo isosceles");
+        }
+        else
+        {
+            Console.WriteLine("Es un triangulo escaleno");
+        }
+    }
+
+    /// <summary>
+    /// Algoritmo que Imprime un minimode 4
+    /// </summary>
+    private static void ImprimirMinimode4()
+    {
+        //declaramos las variables
+        int num1, num2, num3, num4;
+
+        //Pedimos los numeros al usuario
+        Console.Write("Ingrese el primer número: ");
+        num1 = int.Parse(Console.ReadLine());
+
+        Console.Write("Ingrese el segundo número: ");
+        num2 = int.Parse(Console.ReadLine());
+
+        Console.Write("Ingrese el tercer número: ");
+        num3 = int.Parse(Console.ReadLine());
+
+        Console.Write("Ingrese el cuarto número: ");
+        num4 = int.Parse(Console.ReadLine());
+
+        //Compraramos los numeros para saber cual es el menor
+
+        if ( num1 < num2 && num1 < num3 && num1 < num4)
+        {
+            Console.WriteLine($"El número menor es: {num1}");
+        }
+        else if (num2 < num1 && num2 < num3 && num2 < num4)
+        {
+            Console.WriteLine($"El número menor es: {num2}");
+        }
+        else if (num3 < num1 && num3 < num2 && num3 < num4)
+        {
+            Console.WriteLine($"El número menor es: {num3}");
+        }
+        else
+        {
+            Console.WriteLine($"El número menor es: {num4}");
+        }
+
     }
 
     // Creamos un metodo que pida el nombre del usuario y posteriormente lo salude con "Bienvenido [Apellido], [Nombre]
