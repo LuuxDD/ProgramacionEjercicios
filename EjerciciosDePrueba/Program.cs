@@ -10,7 +10,7 @@ internal class Program
         //CalcularDíasDevida();
         //ImprimirMinimode4();
         //Triangulos();
-        FechaValidaInvalida();
+        //FechaValidaInvalida();
 
 
     }
@@ -33,7 +33,19 @@ internal class Program
         Console.Write("Ingrese el año: ");
         año = int.Parse(Console.ReadLine());
 
-        if 
+        if ((dia >= 1 && dia <= 31) && (mes == 1 || mes == 3 ||
+                mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12))
+            Console.WriteLine("Fecha Valida");
+
+        else if ((dia >= 1 && dia <= 30) && (mes == 4 || mes == 6 || mes == 9 || mes == 11))
+            Console.WriteLine("Fecha Valida ");
+
+        else if ((dia == 29) && (mes == 2) && (año % 4 == 0) || (dia >= 1 && dia <= 28) && (mes == 2))
+
+            Console.WriteLine("Fecha Valida ");
+        else
+            Console.WriteLine("Fecha Invalida");
+
     }
 
     //Realizar un metodo que pida los lados de un triangulo y determine si es un triangulo equilatero, isosceles o escaleno
