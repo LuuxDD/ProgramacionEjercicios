@@ -16,7 +16,20 @@ internal class Program
         //PruebaDeObjetoSplit();
         //PruebaDeObjetoPersona();
         //PavaElectrica();
-        ClasesAbtractasYHerencias();
+        //ClasesAbtractasYHerencias();
+        PruebaDeCalculadoraPasajePorReferencia();
+
+    }
+
+    private static void PruebaDeCalculadoraPasajePorReferencia()
+    {
+        int a = 5;
+        int b = 10;
+        int total = 0;
+
+        Calculadora calculadora = new Calculadora();
+        calculadora.Sumar(a, b, ref total);
+        Console.WriteLine($"El resultado de la suma es: {total}");
 
     }
 
