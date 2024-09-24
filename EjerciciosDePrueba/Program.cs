@@ -15,8 +15,15 @@ internal class Program
         //FechaValidaInvalida();
         //PruebaDeObjetoSplit();
         //PruebaDeObjetoPersona();
-        PavaElectrica();
+        //PavaElectrica();
+        ClasesAbtractasYHerencias();
 
+    }
+
+    private static void ClasesAbtractasYHerencias()
+    {
+        Gerente gerente = new Gerente("Juan", "Perez", 123456);
+        Console.WriteLine(gerente.ImprimirDatos());
     }
 
     private static void PavaElectrica()
